@@ -46,7 +46,8 @@ class Character{
 
     // Menghitung jumlah damage yang diterima
     public int damage(int hp,int dmg,int block){
-        if (block==0){
+        int temp=block;
+        if (block<=0){
             hp-=dmg;
         }
         else{
@@ -54,7 +55,7 @@ class Character{
             if (block<0){
                 block=0;
             }
-            dmg-=block;
+            dmg-=temp;
             hp-=dmg;
         }
         return hp;

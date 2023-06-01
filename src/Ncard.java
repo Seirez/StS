@@ -35,6 +35,6 @@ class Ncard extends Card{
 
     // Show blocking amount
     public void showHistory(int cblock, int block) {
-        System.out.println("Block increased by "+block+" to "+cblock+" Block");
+        System.out.println("Block increased by "+block+" to "+(cblock+block)+" Block");
     }
 }

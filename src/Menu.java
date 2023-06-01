@@ -10,8 +10,10 @@ class Menu{
     int MainMenu(Character Ironclad, Character Silent){
         // Menu dalam loop
         for(int i = 0; i<1;){
+            clearscreen();
+
             // Menunjukkan pilihan
-            System.out.print("\n");
+            System.out.println("Main Menu");
             System.out.println("-----------------------------");
             System.out.println("1. Pilih Character");
             System.out.println("2. -");
@@ -26,8 +28,10 @@ class Menu{
             // Pilihan dengan menggunakan switch
             switch (key1) {
                 case 1:
+                clearscreen();
+
                 // Menunjukkan pilihan
-                System.out.print("\n");
+                System.out.println("Pilih Character");
                 System.out.println("-----------------------------");
                 System.out.println("1. "+Ironclad.getCharName());
                 System.out.println("2. "+Silent.getCharName());
@@ -40,14 +44,16 @@ class Menu{
                 // Pilihan dengan menggunakan switch
                 switch (key2) {
                     case 1:
-                        Ironclad.showDesc();
-                        System.out.println("\n\tEnemy Encounter");
+                        clearscreen();
+
+                        System.out.println("Enemy Encounter");
                         i++;
                         return 1;
 
                     case 2:
-                        Silent.showDesc();
-                        System.out.println("\n\t\tEnemy Encounter");
+                        clearscreen();
+
+                        System.out.println("Enemy Encounter");
                         i++;
                         return 2;
                         
@@ -88,12 +94,13 @@ class Menu{
 
             else{
                 // Menunjukkan deskripsi player dan enemy
-                System.out.print("\n");
+                System.out.println("-----------------------------");
                 player.showDesc();
                 System.out.print("\n");
                 enemy.showDesc();
+                System.out.println("-----------------------------");
                 System.out.print("\n");
-
+                
                 // Menunjukkan pilihan
                 System.out.println("Energy : "+turn.getEnergy());
                 System.out.println("-----------------------------");
@@ -109,8 +116,10 @@ class Menu{
                 // Pilihan dengan menggunakan switch
                 switch (key3) {
                     case 1:
+                        clearscreen();
+
                         // Menunjukkan pilihan
-                        System.out.print("\n");
+                        System.out.println("Pilih Card");
                         System.out.println("-----------------------------");
 
                         // Menunjukkan deskripsi card
@@ -132,6 +141,8 @@ class Menu{
                             case 1:
                                 // Cek apa jumlah energy yang dimiliki cukup
                                 if (checkNeeds(turn.getEnergy(),card1.getCardCost())){
+                                    clearscreen();
+
                                     // Pemberitahuan efek card (damage)
                                     card1.showHistory(player.getCharName(),card1.getDamage());
                                     
@@ -151,6 +162,8 @@ class Menu{
                             case 2:
                                 // Cek apa jumlah energy yang dimiliki cukup
                                 if (checkNeeds(turn.getEnergy(),card2.getCardCost())){
+                                    clearscreen();
+
                                     // Pemberitahuan efek card (heal & block)
                                     card2.showHistory(player.getCharName(),player.getHealth(),card2.getHeal());
                                     card2.showHistory(player.getCblock(),card2.getBlock());
@@ -166,6 +179,7 @@ class Menu{
 
                                 // Pemberitahuan energy tidak cukup
                                 else{
+                                    clearscreen();
                                     System.out.println("Not enough energy");
                                 }
                                 break;
@@ -178,6 +192,9 @@ class Menu{
                         // Turn di-akhiri (energy di-reset menjadi penuh)
                         turn.reset(turn.getMaxEnergy());
 
+                        clearscreen();
+
+                        System.out.println("You ended your turn");
                         // Enemy mendapat giliran (menyerang balik)
                         player.setHealth(player.damage(player.getHealth(),ecard.getDamage(),player.getCblock()));
                         ecard.showHistory(enemy.getCharName(),ecard.getDamage());

@@ -152,6 +152,8 @@ class main {
                 System.out.println("Program ends");
             }
 
+            Run.clearscreen();
+
             // Setelah preview battle
             // Meminta keputusan dengan scanner
             System.out.println("Try again?(y/n)");
