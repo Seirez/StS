@@ -168,5 +168,6 @@ class main {
                 System.out.println("Program ends");;
             }
         }
+        inmain.close();
     }
 }
