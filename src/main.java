@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /*
 Slay the Spire
@@ -67,6 +70,25 @@ class main {
         // Scanner
         Scanner inmain = new Scanner(System.in);
 
+        try {
+            
+            // Provide the database URL, username, and password
+            String url = "jdbc:mysql://localhost:3306/sts";
+            String username = "rizq";
+            String password = "password";
+            
+            // Establish the connection
+            Connection connection = DriverManager.getConnection(url, username, password);
+            System.out.println("Connected");
+
+            // Use the connection object to perform database operations
+            
+            // Remember to close the connection when you're done
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
         // Characters
         Character Ironclad = new Character();
         Ironclad.setCharName("Ironclad");
