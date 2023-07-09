@@ -1,5 +1,5 @@
 # No 1
-Use case user
+Use case user  
 Menu
 - Play
     - Pilih character
