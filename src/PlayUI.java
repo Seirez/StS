@@ -155,7 +155,7 @@ class PlayUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Action for card2
                 // Cek apa jumlah energy yang dimiliki cukup
-                if (checkNeeds(turn.getEnergy(),card1.getCardCost())){
+                if (checkNeeds(turn.getEnergy(),card2.getCardCost())){
                     // Pemberitahuan efek card (damage)
                     JOptionPane.showMessageDialog(PlayUI,"<html><br>"+player.getCharName()+" healed for "+card2.getHeal()
                     +"</br><br>"+player.getCharName()+" block increased by "+card2.getBlock()+" to "
