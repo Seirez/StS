@@ -58,7 +58,20 @@ Use case direksi perusahaan
 
 
 # No 3
+1. Single Responsibility Principle (SRP):  
+Prinsip ini menyatakan bahwa sebuah kelas hanya harus memiliki satu alasan untuk berubah, artinya kelas tersebut memiliki tanggung jawab tunggal. Prinsip ini mendorong koherensi tinggi dan keterkaitan rendah, sehingga membuat kelas lebih mudah dipahami dan dipelihara. Untuk mengikuti SRP, Anda harus merancang kelas yang memiliki satu tujuan atau tanggung jawab.
+   
+2. Open/Closed Principle (OCP):  
+OCP menyatakan bahwa entitas perangkat lunak (kelas, modul, fungsi) harus terbuka untuk perluasan namun tertutup untuk modifikasi. Ini berarti Anda harus dapat menambahkan fungsionalitas baru ke dalam sistem tanpa mengubah kode yang sudah ada. Untuk mengikuti OCP, Anda dapat menggunakan teknik seperti abstraksi, pewarisan, dan antarmuka untuk merancang sistem yang fleksibel dan dapat diperluas.
 
+3. Liskov Substitution Principle (LSP):  
+LSP menekankan bahwa objek dari superclass harus dapat diganti dengan objek dari subclass-nya tanpa mengganggu kebenaran sistem. Dengan kata lain, subclass harus dapat menggantikan kelas dasar mereka tanpa mengubah perilaku sistem secara keseluruhan. Dengan mengikuti LSP, Anda memastikan bahwa kode Anda dirancang dengan hierarki pewarisan yang tepat dan menghindari masalah yang tidak terduga saat menggantikan objek.
+
+4. Interface Segregation Principle (ISP):  
+ISP menyatakan bahwa klien tidak boleh dipaksa untuk bergantung pada antarmuka yang tidak mereka gunakan. Alih-alih membuat antarmuka besar dan monolitik, lebih baik memiliki antarmuka yang lebih kecil dan lebih fokus yang disesuaikan dengan klien tertentu. Prinsip ini membantu mencegah kode klien terpengaruh oleh perubahan pada metode antarmuka yang tidak relevan.
+
+5. Dependency Inversion Principle (DIP):  
+DIP menyatakan bahwa modul-level tinggi tidak boleh bergantung pada modul-level rendah; keduanya harus bergantung pada abstraksi. Prinsip ini mendorong keterkaitan yang longgar dan memungkinkan penggantian implementasi yang lebih mudah. Dengan memprogram menggunakan antarmuka atau kelas abstrak daripada implementasi konkret, Anda dapat mencapai fleksibilitas dan keujiabilitas yang lebih baik dalam kode Anda.
 
 # No 4
 
