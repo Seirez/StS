@@ -54,6 +54,7 @@ Use case direksi perusahaan
 
 
 # No 2
+![image](https://github.com/Seirez/StS/assets/94272100/c2ae60e9-56c0-403d-9618-b1e42369b596)
 
 
 # No 3
