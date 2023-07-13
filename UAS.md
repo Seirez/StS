@@ -78,7 +78,8 @@ ISP menyatakan bahwa klien tidak boleh dipaksa untuk bergantung pada antarmuka y
 DIP menyatakan bahwa modul-level tinggi tidak boleh bergantung pada modul-level rendah; keduanya harus bergantung pada abstraksi. Prinsip ini mendorong keterkaitan yang longgar dan memungkinkan penggantian implementasi yang lebih mudah. Dengan memprogram menggunakan antarmuka atau kelas abstrak daripada implementasi konkret, Anda dapat mencapai fleksibilitas dan keujiabilitas yang lebih baik dalam kode Anda.  
 
 # No 4
-
+Class DatabaseConnection memiliki beberapa aspek dari "Data Access Object" design pattern, dimana class tersebut menangani operasi database tingkat rendah. Class ini mengenkapsulasi detail-detail pembuatan koneksi, eksekusi kueri SQL, dan penanganan hasil kueri. Metode-metode dalam kelas ini mengabstraksi kompleksitas operasi database dan menyediakan antarmuka yang disederhanakan bagi komponen-komponen lain dalam aplikasi untuk berinteraksi dengan database.  
+Tetapi Class tersebut tidak memiliki pola DAO yang biasanya melibatkan abstraksi tambahan, seperti antarmuka atau kelas terpisah untuk akses data.
 
 # No 5
 https://github.com/Seirez/StS/blob/main/src/DatabaseConnection.java
